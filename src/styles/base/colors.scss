@@ -1,0 +1,10 @@
+:root {
+  $grey: #343f4f;
+  /// Interface
+  // Primary
+  --c-grey-dark-10: #{darken($grey, 10)};
+  --c-grey: #{$grey};
+  --c-grey-light-1: #{lighten($grey, 30)};
+  --c-grey-light-2: #{lighten($grey, 50)};
+  --c-grey-light-3: #{lighten($grey, 60)};
+}

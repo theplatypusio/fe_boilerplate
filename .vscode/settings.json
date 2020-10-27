@@ -1,0 +1,56 @@
+{
+  "importSorter.sortConfiguration.removeUnusedImports": true,
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      // Modules without slashes (Node Modules)
+      "regex": "^((?!typings|RootTypes|constants|__generated__|state|gql|((.*).scss)|utils|components|pages|assets)|(?!.*/))",
+      "orderLevel": 1
+    },
+    {
+      "regex": "^(__generated__/)",
+      "orderLevel": 4
+    },
+    {
+      "regex": "^(typings/|RootTypes)",
+      "orderLevel": 5
+    },
+    {
+      "regex": "^(constants/)",
+      "orderLevel": 6
+    },
+    {
+      "regex": "^(state/)",
+      "orderLevel": 7
+    },
+    {
+      "regex": "^(gql/)",
+      "orderLevel": 8
+    },
+    {
+      "regex": "^(utils/)",
+      "orderLevel": 9
+    },
+    {
+      "regex": "^(components/|pages/)",
+      "orderLevel": 10
+    },
+    {
+      "regex": "^(assets)",
+      "orderLevel": 11
+    },
+    {
+      "regex": "^((.*).scss)",
+      "orderLevel": 12
+    }
+  ],
+  "macros": {
+    "fullFormat": ["extension.sortImports", "editor.action.formatDocument"]
+  },
+  "eslint.enable": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}

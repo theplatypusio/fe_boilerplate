@@ -1,0 +1,39 @@
+html {
+  font-size: 16px;
+  font-family: $ff-default;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--c-primary-text);
+  text-rendering: optimizeLegibility;
+}
+
+:global {
+  html,
+  body,
+  #__next {
+    height: 100%;
+  }
+}
+
+@include isPointerDevice {
+  ::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(0, 0, 0, 0.1);
+    appearance: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: $brs-s;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+
+  ::-webkit-resizer,
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-corner {
+    display: none;
+  }
+}

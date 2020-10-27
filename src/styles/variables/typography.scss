@@ -1,0 +1,53 @@
+// Font Family
+// @example font-family: $ff-default;
+$ff-default: 'Open Sans', sans-serif;;
+
+// Font Weight
+// @example font-weight: $fw-regular;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi: 600;
+$fw-bold: 700;
+
+// Line Height
+// @example line-height: $lh-m;
+$lh-s: 1.15;
+$lh-m: 1.375;
+$lh-l: 1.5;
+
+// Letter Spacing
+// @example letter-spacing: $ls-m;
+$ls-m: 0.1em;
+$ls-l: 0.3em;
+
+// Body Font Size
+// @example font-size: $fz-body;
+$fz-body: 16px;
+$fz-small: 14px;
+$fz-tiny: 12px;
+$fz-micro: 10px;
+
+// Headers Font Size
+// @example font-size: $fz-title1;
+$fz-title1: 34px;
+$fz-title2: 30px;
+$fz-title3: 26px;
+$fz-title4: 20px;
+$fz-title5: 16px;
+
+// Alternative
+$fz-alt1: 48px;
+$fz-alt2: 40px;
+$fz-alt3: 36px;
+$fz-alt4: 30px;
+
+// Buttons Font Size
+// @example font-size: $fz-button-m;
+$fz-button-m: 14px;
+$fz-button-s: 12px;
+$fz-button-xs: 10px;
+
+// Form Fields Font Size
+// @example font-size: $fz-input-m;
+$fz-input-m: 16px;
+$fz-input-s: 14px;

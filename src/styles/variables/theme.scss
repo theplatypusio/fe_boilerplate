@@ -1,0 +1,29 @@
+// Theme Related Variables
+
+// Border
+// @example border: $bd-base;
+$bd-base: 1px solid grey;
+
+// Border Radius
+// @example border-radius: $brs-m;
+$brs-xs: 3px;
+$brs-s: 5px;
+$brs-m: 8px;
+$brs-max: 100rem;
+
+// Shadows
+// @example box-shadow: $bh-medium;
+// $bh-soft: 0px 0px 20px var(--c-overlay-transparent-1);
+
+// Transition Timing Functions - Easing
+// @example transition-timing-function: $trsf-ease;
+$trsf-ease: ease-in-out;
+$trsf-smooth: cubic-bezier(0.45, 0.45, 0.3, 1);
+
+// Transitions Properties
+// @example transition: $trs-base;
+$trs-immediately: 0.075s $trsf-ease;
+$trs-base: 0.3s $trsf-ease;
+$trs-quick: 0.15s $trsf-ease;
+$trs-smooth: 0.6s $trsf-smooth;
+

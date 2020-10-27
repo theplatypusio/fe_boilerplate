@@ -1,0 +1,30 @@
+// CONTENT
+// Gutter - Horizontal spacing between elements
+// @example margin: auto $gutter-m;
+$gutter-xs:           5px;
+$gutter-s:            10px;
+$gutter-m:            15px;
+$gutter-l:            30px;
+
+// Leading - Vertical spacing between elements
+// @example margin: $leading-m auto;
+$leading-xs:          8px;
+$leading-s:           15px;
+$leading-m:           20px;
+$leading-l:           25px;
+$leading-xl:          40px;
+
+// Max Width - The max width of a page
+// @example max-width: $maw-m;
+$maw-s:               700px;
+$maw-m:               900px;
+$maw-l:               1024px;
+$maw-xl:              1200px;
+
+// Breakpoints - Base Breakpoints for doing responsive styling
+// @example @media (max-width: $bp-m) {
+$bp-xs:               370px;
+$bp-s:                450px;
+$bp-m:                768px;
+$bp-l:                1024px;
+$bp-xl:               1440px;

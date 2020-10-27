@@ -1,0 +1,139 @@
+{
+  "name": "fe-platypus_boilerplate",
+  "version": "1.0.0",
+  "scripts": {
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "build": "next build",
+    "dev": "next",
+    "export": "yarn build && next export",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix --ignore-pattern **/*.test.*",
+    "lint:style": "stylelint '**/*.scss' '!**/vendor/**' --fix",
+    "lint:prettier": "prettier --config ./.prettierrc --write ./src/**/*.{ts,tsx,js}",
+    "postinstall": "patch-package",
+    "preinstall": "test -f .env || cp config/.env.sample .env",
+    "release": "release-it --no-npm.publish",
+    "release:ci": "release-it --no-npm.publish --ci",
+    "serve": "yarn build && yarn start 3000",
+    "start": "next start -p $PORT",
+    "test": "tsc",
+    "test:jest": "jest --watchAll"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@next/bundle-analyzer": "^9.1.5",
+    "@svgr/webpack": "^5.1.0",
+    "@types/node": "^14.0.23",
+    "@types/react": "^16.9.3",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-transition-group": "^4.4.0",
+    "@types/webpack": "^4.41.0",
+    "@types/yup": "^0.26.30",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-source-maps": "0.0.4-canary.1",
+    "autoprefixer": "^9.7.4",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "circular-dependency-plugin": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "husky": "^4.2.3",
+    "next": "9.5.2",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.3.0",
+    "next-offline": "^5.0.2",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.1",
+    "patch-package": "^6.2.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-svgo": "^4.0.2",
+    "postinstall-postinstall": "^2.1.0",
+    "query-string": "^6.10.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-responsive": "^8.0.3",
+    "react-transition-group": "^4.3.0",
+    "sass-resources-loader": "^2.0.1",
+    "typescript": "^3.8.3",
+    "webpack-filter-warnings-plugin": "^1.2.1",
+    "yup": "^0.28.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-import-resolver-webpack": "^0.12.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "lint-staged": "^10.0.6",
+    "prettier": "^1.19.1",
+    "release-it": "^12.4.3",
+    "stylelint": "^13.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-scss": "^3.14.2",
+    "webpack": "^4.43.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(*test).{js,jsx,ts,tsx}": [
+      "yarn lint:prettier",
+      "yarn lint"
+    ],
+    "*.{scss}": [
+      "prettier --config ./.prettierrc --write 'src/**/*.scss' '!**/vendor/*.scss' '!**/variables/*.scss'",
+      "stylelint '**/*.scss' '!**/vendor/**' --fix"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "Automated release: v${version}",
+      "tagName": "v${version}",
+      "requireCleanWorkingDir": false,
+      "requireUpstream": false,
+      "tag": true,
+      "push": true,
+      "commit": true,
+      "pushArgs": [
+        "--follow-tags"
+      ]
+    },
+    "github": {
+      "release": true
+    }
+  },
+  "scarfSettings": {
+    "defaultOptIn": false
+  },
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

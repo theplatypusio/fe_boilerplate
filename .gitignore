@@ -1,0 +1,25 @@
+node_modules
+.next
+.env
+.docs
+.history
+
+yarn-error.log
+
+# Local Netlify folder
+.netlify
+out
+
+cypress/screenshots
+cypress/videos
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,0 +1,69 @@
+@import '../functions/string_split';
+
+/// Mulitplies the selector to make it stronger. Use instead of !important;
+/// @param {number} $quantity [1] The amout of times, we should add an extra class
+/// @group Utilities
+/// @example scss - SCSS Input
+/// .selector {
+///   @include multiplier {
+///     ...css,
+///   }
+/// }
+///
+
+@mixin multiplier($quantity: 1) {
+  $selectors: string-split('#{&}', ',');
+
+  @each $s in $selectors {
+    $splitString: string-split('#{$s}', '.');
+    $lastIndex: length($splitString);
+    $lastSelector: '.#{nth($splitString, $lastIndex)}';
+    $selector: &;
+
+    @for $quantity from 1 through $quantity {
+      $selector: selector_append($selector, $lastSelector);
+    }
+
+    @at-root #{$selector} {
+      @content;
+    }
+  }
+}
+
+/// Do a find/replace in your current selector
+/// @param {string} $find The string you're searching for
+/// @param {string} $replace The string you're replacing $find with
+/// @group Utilities
+/// @example scss - SCSS Input
+/// .button.lol {
+///   @include replace('.lol', '.loldemort') {
+///     ...css,
+///   }
+/// }
+///
+@mixin replace($find, $replace) {
+  @at-root #{selector-replace(&, $find, $replace)} {
+    @content;
+  }
+}
+
+@mixin clearButton {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  background: transparent;
+  border: none;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  appearance: none;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}

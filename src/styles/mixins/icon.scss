@@ -1,0 +1,13 @@
+// PostCSS SVG Import Loader
+//
+// @Usage
+// @include icon(close)
+// @include icon(close, (fill=red))
+// @include icon(close, (fill=red, stroke=green))
+@mixin icon($icon: null, $properties: null) {
+  @if $properties {
+    background-image: svg-load('#{$icon}.svg', $properties);
+  } @else {
+    background-image: svg-load('#{$icon}.svg');
+  }
+}

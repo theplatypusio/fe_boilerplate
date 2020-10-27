@@ -1,0 +1,18 @@
+.header {
+  background-color: v(c-grey-light-3);
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: 20px;
+  }
+}

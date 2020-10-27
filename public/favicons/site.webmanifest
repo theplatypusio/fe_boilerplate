@@ -1,0 +1,42 @@
+{
+  "name": "Platypus",
+  "short_name": "Platypus",
+  "icons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Culture - Comparison",
+      "description": "Culture - Comparison Description",
+      "url": "/organization/culture/comparison"
+    },
+    {
+      "name": "Culture - Evolution",
+      "description": "Culture - Evolution Description",
+      "url": "/organization/culture/evolution"
+    },
+    {
+      "name": "Recruitment",
+      "description": "Recruitment Description",
+      "url": "/organization/recruitment/postings"
+    },
+    {
+      "name": "Satisfaction",
+      "description": "Satisfaction Description",
+      "url": "/organization/satisfaction/statistics"
+    }
+  ],
+  "theme_color": "#343f4f",
+  "background_color": "#343f4f",
+  "start_url": "/login",
+  "display": "standalone"
+}

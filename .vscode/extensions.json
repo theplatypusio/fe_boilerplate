@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "clinyong.vscode-css-modules",
+    "coenraads.bracket-pair-colorizer",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "geddski.macros",
+    "gruntfuggly.todo-tree",
+    "hex-ci.stylelint-plus",
+    "humao.rest-client",
+    "mike-co.import-sorter",
+    "mrmlnc.vscode-scss",
+    "ms-vsliveshare.vsliveshare",
+    "msjsdiag.debugger-for-chrome",
+    "oderwat.indent-rainbow",
+    "pkief.material-icon-theme",
+    "sdras.night-owl",
+    "usernamehw.errorlens",
+    "wix.vscode-import-cost",
+    "xyz.local-history",
+    "mksafi.find-jump",
+    "christian-kohler.path-intellisense",
+    "yzhang.markdown-all-in-one",
+    "tyriar.sort-lines"
+  ]
+}

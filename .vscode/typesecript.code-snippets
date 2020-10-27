@@ -1,0 +1,167 @@
+{
+  // Place your frontend workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "logs": {
+    "prefix": "logs",
+    "body": ["console.log('#${TM_LINE_NUMBER}', '$1', $1)$2"],
+    "description": "Console.log"
+  },
+  "log": {
+    "prefix": "log",
+    "body": ["console.log('#${TM_LINE_NUMBER}', $1)$2"],
+    "description": "Console.log"
+  },
+  "debugger": {
+    "prefix": "db",
+    "body": ["debugger;"],
+    "description": "Debugger"
+  },
+  "Line Numer": {
+    "prefix": "ln",
+    "body": ["#${TM_LINE_NUMBER}"]
+  },
+  "Line Numer In String": {
+    "prefix": "lns",
+    "body": ["'#${TM_LINE_NUMBER}'"]
+  },
+  "Import Styles": {
+    "prefix": "imps",
+    "body": ["// Styles", "import styles from './$TM_FILENAME_BASE.scss';"]
+  },
+  "Import Styles Custom": {
+    "prefix": "impsc",
+    "body": ["// Styles", "import styles from './$1.scss';"]
+  },
+  "jsdocs": {
+    "prefix": "jsd",
+    "body": ["/** $1 */"],
+    "description": "Javascript Documentation"
+  },
+  "jsdocsmulti line": {
+    "prefix": "jsdml",
+    "body": ["/**", " * $1", " */"],
+    "description": "Javascript Documentation Multi Line"
+  },
+  "jsdocsparameters": {
+    "prefix": "jsdp",
+    "body": ["/**", " * $1", " * @param {$2} $3 - $4", " * @return {$5} $6", " */"],
+    "description": "Javascript Documentation with Params"
+  },
+  "jsdocsexample": {
+    "prefix": "jsdx",
+    "body": [
+      "/**",
+      " * $1",
+      " * @param {$2} $3 - $4",
+      " * @return {$5} $6",
+      " * @example",
+      " *     $7",
+      " */"
+    ],
+    "description": "Javascript Documentation"
+  },
+  "Destructure Object": {
+    "prefix": "do",
+    "body": ["const { $2 } = $1"]
+  },
+  "Destructure Array": {
+    "prefix": "da",
+    "body": ["const [ $2 ] = $1"]
+  },
+  "typescript-disable": {
+    "prefix": "tsd",
+    "body": ["// @ts-ignore"]
+  },
+  "eslint-disable-next-line": {
+    "prefix": "esdnl",
+    "body": ["// eslint-disable-next-line"]
+  },
+  "eslint-disable-line": {
+    "prefix": "esdl",
+    "body": ["// eslint-disable-line"]
+  },
+  "eslint-disable": {
+    "prefix": "esd",
+    "body": ["/* eslint-disable */"]
+  },
+  "eslint-enable": {
+    "prefix": "ese",
+    "body": ["/* eslint-enable */"]
+  },
+  "React Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "type Props = {};",
+      "",
+      "const $TM_FILENAME_BASE = ({}: Props) => {",
+      "  return ($1)",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE;"
+    ]
+  },
+  "useTypedSelector": {
+    "prefix": "uts",
+    "body": ["const $1 = useTypedSelector(({$2}) => $3)"]
+  },
+  "useCallback": {
+    "prefix": "uscb",
+    "body": ["const $1 = useCallback($2, [$3]);"]
+  },
+  "useEffect": {
+    "prefix": "uscb",
+    "body": ["const {$3} = useEffect($1, [$2]);"]
+  },
+  "Typings - Import Comment": {
+    "prefix": "ict",
+    "body": ["// Typings"]
+  },
+  "Constants - Import Comment": {
+    "prefix": "icn",
+    "body": ["// Constants"]
+  },
+  "State - Import Comment": {
+    "prefix": "ics",
+    "body": ["// State"]
+  },
+  "Styles - Import Comment": {
+    "prefix": "icst",
+    "body": ["// Styles"]
+  },
+  "GraphQL": {
+    "prefix": "icg",
+    "body": ["// GraphQL"]
+  },
+  "Utils - Import Comment": {
+    "prefix": "icu",
+    "body": ["// Utils"]
+  },
+  "Components - Import Comment": {
+    "prefix": "icm",
+    "body": ["// Components"]
+  },
+  "Pages - Import Comment": {
+    "prefix": "icp",
+    "body": ["// Pages"]
+  },
+  "Assets - Import Comment": {
+    "prefix": "ica",
+    "body": ["// Assets"]
+  }
+}

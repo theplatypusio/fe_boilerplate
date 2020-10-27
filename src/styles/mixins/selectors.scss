@@ -1,0 +1,89 @@
+@mixin isPointerDevice {
+  // Creates media query for devices with a pointer/mouse, like a Desktop
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin isTouchDevice {
+  /// Creates media query for devices with no pointer/mouse, like a tablet or mobile
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin pageIn {
+  :global(.page-in) & {
+    @content;
+  }
+
+  :global(.layoutProvider-in) & {
+    @content;
+  }
+}
+
+@mixin pageInActive {
+  :global(.page-inActive) & {
+    @content;
+  }
+
+  :global(.layoutProvider-inActive) & {
+    @content;
+  }
+}
+
+@mixin pageOut {
+  :global(.page-out) & {
+    @content;
+  }
+
+  :global(.layoutProvider-out) & {
+    @content;
+  }
+}
+
+@mixin pageOutActive {
+  :global(.page-outActive) & {
+    @content;
+  }
+
+  :global(.layoutProvider-outActive) & {
+    @content;
+  }
+}
+
+@mixin layoutIn {
+  :global(.layoutProvider-in) & {
+    @content;
+  }
+}
+
+@mixin layoutInActive {
+  :global(.layoutProvider-inActive) & {
+    @content;
+  }
+}
+
+@mixin layoutOut {
+  :global(.layoutProvider-out) & {
+    @content;
+  }
+}
+
+@mixin layoutOutActive {
+  :global(.layoutProvider-outActive) & {
+    @content;
+  }
+}
+
+@mixin isSafari {
+  [data-browser-name='safari'] & {
+    @content;
+  }
+}
+
+@mixin isFirefox {
+  [data-browser-name='firefox'] & {
+    @content;
+  }
+}

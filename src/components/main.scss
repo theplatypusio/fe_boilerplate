@@ -1,0 +1,12 @@
+.container {
+  padding: $gutter-m;
+
+  &:global(.enter) {
+    opacity: 0;
+
+    &-active {
+      opacity: 1;
+      transition: opacity $trs-smooth;
+    }
+  }
+}

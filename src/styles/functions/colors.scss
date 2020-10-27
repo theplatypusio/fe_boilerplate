@@ -1,0 +1,36 @@
+/// Check whether a specific color is Light / Dark
+/// @param {color} $coloe The Color
+/// @group Checks
+/// @example scss
+/// isLight(black)
+///
+
+@function isLight($color) {
+  @return lightness($color) > 50%;
+}
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+  @return mix(black, $color, $percent);
+}
+
+@function v($variable) {
+  // If the variables first character is an '-'
+  @if (str-slice($variable, 0, 1) == '-') {
+    // Detect whether it's a CSS variable
+    @if (str-slice($variable, 0, 2) == '--') {
+      @return var(#{$variable});
+    }
+
+    // Or a negative value
+    @return calc(var(-#{$variable}) * -1);
+  }
+
+  // Return the value prefixed with the '--'
+  @return var(--#{$variable});
+}
